@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.UserDetailsFragment"
+    android:padding="@dimen/_18sdp">
+
+    <EditText
+        android:padding="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_details_fields"
+        android:enabled="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/customer_name"/>
+    <EditText
+        android:padding="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_details_fields"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/customer_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/customer_email"/>
+    <EditText
+        android:padding="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_details_fields"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/customer_email"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/customer_balance"/>
+   <Button
+       android:layout_marginTop="@dimen/_8sdp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/btn_transfer"
+       android:text="@string/transfer"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/customer_balance"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

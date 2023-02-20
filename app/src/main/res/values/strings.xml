@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GRIP_task</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="transfers">Transfers</string>
+    <string name="transfer">Transfer</string>
+    <string name="submit">Submit</string>
+    <string name="if_no_transfers">No Transfers Yet</string>
+</resources>

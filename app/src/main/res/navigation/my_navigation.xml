@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/usersFragment">
+
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.example.grip_task.view.fragments.AllUsersFragment"
+        android:label="Customers"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_usersFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
+        <action
+            android:id="@+id/action_usersFragment_to_transfersFragment"
+            app:destination="@+id/transfersFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.example.grip_task.view.fragments.UserDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_user_details" >
+        <argument
+            android:name="customer"
+            app:argType="com.example.grip_task.model.roomdatabase.entities.Customer" />
+        <action
+            android:id="@+id/action_userDetailsFragment_to_transferDialog"
+            app:destination="@id/transferDialog" />
+        <argument
+            android:name="customers"
+            app:argType="com.example.grip_task.model.roomdatabase.entities.Customer[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/transfersFragment"
+        android:name="com.example.grip_task.view.fragments.TransfersFragment"
+        android:label="Transfers"
+        tools:layout="@layout/fragment_transfers" />
+    <dialog
+        android:id="@+id/transferDialog"
+        android:name="com.example.grip_task.view.dialogs.TransferDialog"
+        android:label="TransferDialog" >
+        <action
+            android:id="@+id/action_transferDialog_self"
+            app:destination="@id/transferDialog" />
+        <argument
+            android:name="customers"
+            app:argType="com.example.grip_task.model.roomdatabase.entities.Customer[]" />
+        <argument
+            android:name="sender"
+            app:argType="com.example.grip_task.model.roomdatabase.entities.Customer" />
+    </dialog>
+</navigation>
